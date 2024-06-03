@@ -1,6 +1,6 @@
 import Flex from "@/components/Flex";
 import { ThemedText } from "@/components/ThemedText";
-import { Colors } from "@/constants/Colors";
+import { Colors } from "@/constants/Styles";
 import { Market } from "@/constants/DummyData";
 import { View } from "react-native";
 import { StyleSheet } from "react-native";

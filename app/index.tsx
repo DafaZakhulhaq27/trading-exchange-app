@@ -1,12 +1,9 @@
-import { Text, View } from "react-native";
-import { useMarketContext } from "./_hooks/context";
+import InfoSection from "./_components/InfoSection";
 
 export default function Home() {
-  const { selectedMarket } = useMarketContext();
-
   return (
-    <View>
-      <Text>{selectedMarket?.name}</Text>
-    </View>
+    <>
+      <InfoSection />
+    </>
   );
 }

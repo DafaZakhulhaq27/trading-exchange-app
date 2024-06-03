@@ -7,11 +7,10 @@ import { FlatList, Keyboard, View } from "react-native";
 import MarketSort from "./MarketSort";
 import { StyleSheet } from "react-native";
 import MarketItem from "./MarketItem";
-import { SafeAreaView } from "react-native-safe-area-context";
 import { useEffect } from "react";
 import SearchInput from "@/components/Forms/SearchInput";
 import Flex from "@/components/Flex";
-import { Colors } from "@/constants/Colors";
+import { Colors, globalStyles } from "@/constants/Styles";
 import useMarket from "@/app/_hooks/useMarket";
 import Container from "@/components/Container";
 
@@ -28,7 +27,7 @@ export default function MarketDrawer(props: DrawerContentComponentProps) {
 
   return (
     <Container>
-      <View style={styles.container}>
+      <View style={globalStyles.container}>
         <ThemedText>Market</ThemedText>
         <SearchInput placeholder="Search Assets" onChangeText={_onSearch} />
         <MarketSort onChange={_onSort} />
@@ -64,10 +63,6 @@ export default function MarketDrawer(props: DrawerContentComponentProps) {
 }
 
 export const styles = StyleSheet.create({
-  container: {
-    marginVertical: 10,
-    marginHorizontal: 20,
-  },
   notFoundTitle: {
     fontWeight: "bold",
   },

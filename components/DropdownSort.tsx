@@ -2,7 +2,7 @@ import { Pressable, View } from "react-native";
 import { ThemedText } from "./ThemedText";
 import { Ionicons } from "@expo/vector-icons";
 import { StyleSheet } from "react-native";
-import { Colors } from "@/constants/Colors";
+import { Colors } from "@/constants/Styles";
 import { SortType } from "@/types/filter";
 
 const activeColor = Colors.main.dark;

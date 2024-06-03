@@ -1,7 +1,7 @@
 import { useMarketContext } from "@/app/_hooks/context";
 import Flex from "@/components/Flex";
 import { ThemedText } from "@/components/ThemedText";
-import { Colors } from "@/constants/Colors";
+import { Colors, globalStyles } from "@/constants/Styles";
 import { Ionicons } from "@expo/vector-icons";
 import { DrawerHeaderProps } from "@react-navigation/drawer";
 import { Pressable, StyleSheet } from "react-native";
@@ -12,7 +12,7 @@ export default function MarketHeader({ navigation }: DrawerHeaderProps) {
 
   return (
     <SafeAreaView>
-      <Flex style={styles.headerContainer} justify="space-between">
+      <Flex style={globalStyles.container} justify="space-between">
         <Pressable
           onPress={() => {
             navigation.toggleDrawer();
@@ -34,10 +34,6 @@ export default function MarketHeader({ navigation }: DrawerHeaderProps) {
 }
 
 const styles = StyleSheet.create({
-  headerContainer: {
-    paddingHorizontal: 20,
-    paddingVertical: 10,
-  },
   headerToggle: {
     flexDirection: "row",
     alignItems: "center",
