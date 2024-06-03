@@ -39,4 +39,10 @@ export const globalStyles = StyleSheet.create({
     paddingHorizontal: Spacing.baseHorizontalPadding,
     paddingVertical: Spacing.baseVerticalPadding,
   },
+  contanerVertical: {
+    paddingVertical: Spacing.baseVerticalPadding,
+  },
+  containerHorizontal: {
+    paddingHorizontal: Spacing.baseHorizontalPadding,
+  },
 });
