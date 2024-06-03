@@ -1,5 +1,12 @@
-import { Text } from "react-native";
+import { Text, View } from "react-native";
+import { useMarketContext } from "./_hooks/context";
 
 export default function Home() {
-  return <Text>Hal io</Text>;
+  const { selectedMarket } = useMarketContext();
+
+  return (
+    <View>
+      <Text>{selectedMarket?.name}</Text>
+    </View>
+  );
 }
