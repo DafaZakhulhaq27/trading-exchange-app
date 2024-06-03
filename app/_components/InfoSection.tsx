@@ -74,12 +74,12 @@ const styles = StyleSheet.create({
     gap: 5,
   },
   infoItemTitle: {
-    lineHeight: 12,
+    lineHeight: 16,
     fontSize: 8,
     color: Colors.main.secondary,
   },
   infoItemDesc: {
     lineHeight: 12,
-    fontSize: 10,
+    fontSize: 12,
   },
 });

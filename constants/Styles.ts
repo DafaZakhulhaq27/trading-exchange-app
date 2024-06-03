@@ -7,6 +7,7 @@ import { StyleSheet } from "react-native";
 
 const dark = "black";
 const secondary = "#A8A7A9";
+const grey = "#E8E7E9";
 const success = "#2AA366";
 const danger = "#DD4446";
 
@@ -16,6 +17,7 @@ export const Colors = {
     secondary,
     success,
     danger,
+    grey,
   },
   // TODO: adjust when light mode color ready
   light: {
