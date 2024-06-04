@@ -25,6 +25,7 @@ export default function OrderBookSection() {
 export const styles = StyleSheet.create({
   container: {
     gap: 10,
+    marginTop: 10,
   },
   containerOrderForm: {
     flex: 1.5,

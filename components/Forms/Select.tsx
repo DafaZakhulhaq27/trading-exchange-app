@@ -20,7 +20,7 @@ export default function Select({ data, ...props }: SelectProps) {
       renderButton={(selectedItem, isOpened) => {
         return (
           <Flex style={styles.selectButton}>
-            <ThemedText style={styles.selectButtonText}>
+            <ThemedText type="xs" style={styles.selectButtonText}>
               {selectedItem?.title}
             </ThemedText>
             <Ionicons name={isOpened ? "chevron-up" : "chevron-down"} />
@@ -48,6 +48,7 @@ const styles = StyleSheet.create({
   },
   selectButton: {
     height: 28,
+    backgroundColor: "white",
     borderRadius: 5,
     paddingHorizontal: 10,
     justifyContent: "space-between",

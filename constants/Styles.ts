@@ -38,13 +38,16 @@ export const Spacing = {
 
 export const globalStyles = StyleSheet.create({
   container: {
+    backgroundColor: "white",
     paddingHorizontal: Spacing.baseHorizontalPadding,
     paddingVertical: Spacing.baseVerticalPadding,
   },
   contanerVertical: {
+    backgroundColor: "white",
     paddingVertical: Spacing.baseVerticalPadding,
   },
   containerHorizontal: {
+    backgroundColor: "white",
     paddingHorizontal: Spacing.baseHorizontalPadding,
   },
 });

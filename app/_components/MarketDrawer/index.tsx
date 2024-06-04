@@ -20,9 +20,7 @@ export default function MarketDrawer(props: DrawerContentComponentProps) {
   const isDrawerOpen = useDrawerStatus() === "open";
 
   useEffect(() => {
-    if (!isDrawerOpen) {
-      Keyboard.dismiss();
-    }
+    Keyboard.dismiss();
   }, [isDrawerOpen]);
 
   return (
