@@ -19,7 +19,7 @@ const TabContent = ({ activeTab }: { activeTab: string }) => {
   }
 };
 
-export default function MyAssetOrder() {
+export default function MyAssetOrderSection() {
   const [activeTab, setActiveTab] = useState(tabsList[0]);
 
   return (
