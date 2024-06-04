@@ -1,11 +1,8 @@
-import { Pressable, View } from "react-native";
+import { Pressable, View, StyleSheet } from "react-native";
 import ButtonBuySell from "./ButtonBuySell";
 import Select from "@/components/Forms/Select";
-import { StyleSheet } from "react-native";
-import { useState } from "react";
 import FormInput from "@/components/Forms/FormInput";
 import Flex from "@/components/Flex";
-import { useMarketContext } from "@/app/_hooks/context";
 import { Colors } from "@/constants/Styles";
 import { Slider } from "@miblanchard/react-native-slider";
 import { ThemedText } from "@/components/ThemedText";
@@ -67,7 +64,7 @@ export default function OrderForm() {
         <FormInput
           onChangeText={(v) => handleChange("total", v)}
           value={form.total?.toLocaleString()}
-          label="Total (IDR)"
+          label={`Jumlah (${selectedMarket?.currency})`}
           placeholder="0"
           keyboardType="numeric"
         />

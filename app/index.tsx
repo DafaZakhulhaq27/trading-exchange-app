@@ -3,6 +3,7 @@ import GraphSection from "./_components/GraphSection";
 import InfoSection from "./_components/InfoSection";
 import OrderBookSection from "./_components/OrderBookSection";
 import { ScrollView } from "react-native-gesture-handler";
+import MyAssetOrder from "./_components/MyAssetsOrder";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <InfoSection />
       <GraphSection />
       <OrderBookSection />
+      <MyAssetOrder />
     </ScrollView>
   );
 }

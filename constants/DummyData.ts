@@ -39,3 +39,70 @@ export const dummyMarketData: Market[] = Array.from(
     };
   }
 );
+
+export const dummyDataPriceDiff = {
+  min: [
+    {
+      id: 1,
+      price: 61511000,
+      token: 0.4875,
+    },
+    {
+      id: 2,
+      price: 61421000,
+      token: 7.99999,
+    },
+    {
+      id: 3,
+      price: 61387000,
+      token: 0.4125,
+    },
+    {
+      id: 4,
+      price: 61379000,
+      token: 0.824343,
+    },
+    {
+      id: 5,
+      price: 61233000,
+      token: 0.3232232,
+    },
+    {
+      id: 6,
+      price: 61220000,
+      token: 0.29451,
+    },
+  ],
+  plus: [
+    {
+      id: 7,
+      price: 61038000,
+      token: 0.21753,
+    },
+    {
+      id: 8,
+      price: 61033000,
+      token: 7.99999,
+    },
+    {
+      id: 9,
+      price: 61031000,
+      token: 0.0932,
+    },
+    {
+      id: 10,
+      price: 61000000,
+      token: 1.01636,
+    },
+    {
+      id: 11,
+      price: 60981000,
+      token: 0.29476,
+    },
+    {
+      id: 12,
+      price: 60927000,
+      token: 0.337533,
+    },
+  ],
+};
