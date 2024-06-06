@@ -44,7 +44,7 @@ export default function OrderForm() {
 
       <FormInput
         onChangeText={(v) => handleChange("price", v)}
-        value={form.price?.toLocaleString()}
+        value={form.price?.toString()}
         label="Harga"
         placeholder="0"
         keyboardType="numeric"
@@ -56,14 +56,14 @@ export default function OrderForm() {
       >
         <FormInput
           onChangeText={(v) => handleChange("amount", v)}
-          value={form.amount?.toLocaleString()}
+          value={form.amount?.toString()}
           label={`Jumlah (${selectedMarket?.name})`}
           placeholder="0"
           keyboardType="numeric"
         />
         <FormInput
           onChangeText={(v) => handleChange("total", v)}
-          value={form.total?.toLocaleString()}
+          value={form.total?.toString()}
           label={`Jumlah (${selectedMarket?.currency})`}
           placeholder="0"
           keyboardType="numeric"

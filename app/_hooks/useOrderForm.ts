@@ -43,7 +43,7 @@ export default function useOrderForm() {
   const handleChange = (name: string, value: string) => {
     setForm((prev) => ({
       ...prev,
-      [name]: isNaN(parseInt(value)) ? 0 : parseInt(value.replace(/\./g, "")),
+      [name]: value.replace(/[^0-9.]/g, ""),
     }));
   };
 
