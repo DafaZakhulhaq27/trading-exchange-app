@@ -2,7 +2,7 @@ import Flex from "@/components/Flex";
 import { ThemedText } from "@/components/ThemedText";
 import { Colors } from "@/constants/Styles";
 import { Market } from "@/constants/DummyData";
-import { View } from "react-native";
+import { TouchableOpacity, View } from "react-native";
 import { StyleSheet } from "react-native";
 
 type Props = {
@@ -11,13 +11,7 @@ type Props = {
 
 export default function MarketItem({ onClick, ...props }: Props) {
   return (
-    <Flex
-      style={{
-        paddingVertical: 5,
-      }}
-      justify="space-between"
-      onPress={() => onClick(props)}
-    >
+    <TouchableOpacity style={styles.container} onPress={() => onClick(props)}>
       <View>
         <Flex>
           <ThemedText style={styles.name} type="sm">
@@ -47,11 +41,17 @@ export default function MarketItem({ onClick, ...props }: Props) {
           </ThemedText>
         </Flex>
       </Flex>
-    </Flex>
+    </TouchableOpacity>
   );
 }
 
 export const styles = StyleSheet.create({
+  container: {
+    paddingVertical: 5,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
   name: {
     color: Colors.main.dark,
   },

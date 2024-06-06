@@ -26,7 +26,7 @@ export default function Trades() {
       </Flex>
       <View style={{ marginTop: 5 }}>
         {dummyDataTrades.map((_) => (
-          <Flex>
+          <Flex key={_.id}>
             <ThemedText style={[styles.textCell, { flex: 1 }]}>
               {_.time}
             </ThemedText>

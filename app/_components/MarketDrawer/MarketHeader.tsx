@@ -4,7 +4,7 @@ import { ThemedText } from "@/components/ThemedText";
 import { Colors, globalStyles } from "@/constants/Styles";
 import { Ionicons } from "@expo/vector-icons";
 import { DrawerHeaderProps } from "@react-navigation/drawer";
-import { Pressable, StyleSheet } from "react-native";
+import { Pressable, StyleSheet, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function MarketHeader({ navigation }: DrawerHeaderProps) {
@@ -13,7 +13,7 @@ export default function MarketHeader({ navigation }: DrawerHeaderProps) {
   return (
     <SafeAreaView>
       <Flex style={globalStyles.container} justify="space-between">
-        <Pressable
+        <TouchableOpacity
           onPress={() => {
             navigation.toggleDrawer();
           }}
@@ -26,7 +26,7 @@ export default function MarketHeader({ navigation }: DrawerHeaderProps) {
           <ThemedText style={styles.currencyMarket}>
             /{selectedMarket?.currency}
           </ThemedText>
-        </Pressable>
+        </TouchableOpacity >
         <Ionicons name="ellipsis-vertical" size={20} />
       </Flex>
     </SafeAreaView>

@@ -4,18 +4,16 @@ import { useState } from "react";
 import { View } from "react-native";
 import Graph from "./Graph";
 import { ThemedText } from "@/components/ThemedText";
-import Depth from "./Depth";
 import Trades from "./Trades";
 import Info from "./Info";
 
-const tabsList = ["Grafik", "Depth", "Trades", "Info"];
+const tabsList = ["Grafik", "Trades", "Info"];
 
 const TabContent = ({ activeTab }: { activeTab: string }) => {
   switch (activeTab) {
     case "Grafik":
       return <Graph />;
-    case "Depth":
-      return <Depth />;
+
     case "Trades":
       return <Trades />;
     case "Info":
