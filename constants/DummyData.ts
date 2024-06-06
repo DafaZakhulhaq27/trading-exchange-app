@@ -1,3 +1,11 @@
+type Stock = {
+  timestamp: number;
+  open: number;
+  high: number;
+  low: number;
+  close: number;
+};
+
 export type Market = {
   id: number;
   name: string;
@@ -10,6 +18,7 @@ export type Market = {
   priceHigh: number;
   priceLow: number;
   change: number;
+  stocks: Stock[];
 };
 
 export const dummyMarketData: Market[] = Array.from(
@@ -23,6 +32,36 @@ export const dummyMarketData: Market[] = Array.from(
     const priceLow = price - Math.floor(Math.random() * 1000);
     const change = parseFloat((Math.random() * 2 - 1).toFixed(2));
     const priceChange = Math.round(price * (change / 100));
+    const stocks = () => {
+      const data: Stock[] = [
+        {
+          timestamp: 1625945400000,
+          open: 33575.25,
+          high: 33600.52,
+          low: 33475.12,
+          close: 33520.11,
+        },
+      ];
+
+      for (let i = data.length; i < 30; i++) {
+        const lastDataPoint = data[data.length - 1];
+        const newTimestamp = lastDataPoint.timestamp + 1800000;
+        const newOpen = lastDataPoint.close + (Math.random() * 1000 - 500);
+        const newHigh = newOpen + Math.random() * 1000;
+        const newLow = newOpen - Math.random() * 1000;
+        const newClose = newLow + Math.random() * (newHigh - newLow);
+
+        data.push({
+          timestamp: newTimestamp,
+          open: parseFloat(newOpen.toFixed(2)),
+          high: parseFloat(newHigh.toFixed(2)),
+          low: parseFloat(newLow.toFixed(2)),
+          close: parseFloat(newClose.toFixed(2)),
+        });
+      }
+
+      return data;
+    };
 
     return {
       id: index + 1,
@@ -36,6 +75,7 @@ export const dummyMarketData: Market[] = Array.from(
       priceLow,
       change,
       priceChange,
+      stocks: stocks(),
     };
   }
 );
