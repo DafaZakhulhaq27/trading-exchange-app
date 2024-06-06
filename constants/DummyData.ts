@@ -146,3 +146,30 @@ export const dummyDataPriceDiff = {
     },
   ],
 };
+
+export const dummyDataTrades = [
+  {
+    time: "10:22:16",
+    side: "Buy",
+    price: 630000000,
+    amount: 0.0000343,
+  },
+  {
+    time: "11:45:10",
+    side: "Sell",
+    price: 629500000,
+    amount: 0.0000288,
+  },
+  {
+    time: "12:03:21",
+    side: "Buy",
+    price: 630100000,
+    amount: 0.0000375,
+  },
+  {
+    time: "12:59:59",
+    side: "Sell",
+    price: 628900000,
+    amount: 0.00004,
+  },
+];
