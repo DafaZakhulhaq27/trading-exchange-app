@@ -93,7 +93,7 @@ export default function RootLayout() {
     }
   }, [loaded]);
 
-  if (!loaded || !socket.connected) {
+  if (!loaded) {
     return null;
   }
 
