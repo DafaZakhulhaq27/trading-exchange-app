@@ -3,7 +3,7 @@ import { ThemedText } from "@/components/ThemedText";
 import { Colors, globalStyles } from "@/constants/Styles";
 import { View } from "react-native";
 import { StyleSheet } from "react-native";
-import { useMarketContext } from "../_hooks/context";
+import { useMarketStore } from "../_stores/useMarketStore";
 
 type InfoItemProps = {
   title: string;
@@ -22,7 +22,7 @@ const InfoItem = ({ title, value }: InfoItemProps) => {
 };
 
 export default function InfoSection() {
-  const { selectedMarket } = useMarketContext();
+  const { selectedMarket } = useMarketStore();
 
   if (!selectedMarket) return;
 

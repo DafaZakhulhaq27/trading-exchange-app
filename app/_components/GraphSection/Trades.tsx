@@ -1,4 +1,4 @@
-import { useMarketContext } from "@/app/_hooks/context";
+import { useMarketStore } from "@/app/_stores/useMarketStore";
 import Flex from "@/components/Flex";
 import { ThemedText } from "@/components/ThemedText";
 import { dummyDataTrades } from "@/constants/DummyData";
@@ -8,7 +8,7 @@ import { View, StyleSheet } from "react-native";
 const { secondary, success, danger } = Colors.main;
 
 export default function Trades() {
-  const { selectedMarket } = useMarketContext();
+  const { selectedMarket } = useMarketStore();
 
   return (
     <View style={globalStyles.container}>

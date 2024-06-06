@@ -5,15 +5,15 @@ import { useState } from "react";
 import { View, StyleSheet, Pressable, Dimensions } from "react-native";
 import { CandlestickChart } from "react-native-wagmi-charts";
 import { BarChart } from "react-native-gifted-charts";
-import { useMarketContext } from "@/app/_hooks/context";
 import { format } from "date-fns";
+import { useMarketStore } from "@/app/_stores/useMarketStore";
 
 const { secondary, dark, success, danger } = Colors.main;
 
 const filterList = ["1M", "15M", "1H", "1D"];
 
 export default function Graph() {
-  const { selectedMarket } = useMarketContext();
+  const { selectedMarket } = useMarketStore();
   const [activeFilter, setActiveFilter] = useState(filterList[0]);
 
   if (!selectedMarket) return;

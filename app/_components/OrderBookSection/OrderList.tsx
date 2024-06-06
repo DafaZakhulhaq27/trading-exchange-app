@@ -1,4 +1,4 @@
-import { useMarketContext } from "@/app/_hooks/context";
+import { useMarketStore } from "@/app/_stores/useMarketStore";
 import Flex from "@/components/Flex";
 import { ThemedText } from "@/components/ThemedText";
 import { dummyDataPriceDiff } from "@/constants/DummyData";
@@ -33,7 +33,7 @@ const OrderListItem = ({
 };
 
 export default function OrderList() {
-  const { selectedMarket } = useMarketContext();
+  const { selectedMarket } = useMarketStore();
 
   return (
     <View style={styles.container}>

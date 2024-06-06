@@ -2,6 +2,7 @@ import { Colors, globalStyles } from "@/constants/Styles";
 import { ThemedText } from "./ThemedText";
 import Flex from "./Flex";
 import { Pressable, StyleSheet } from "react-native";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 const { secondary, dark } = Colors.main;
 
@@ -15,7 +16,7 @@ export default function Tabs({ activeTab, onChange, tabs }: Props) {
   return (
     <Flex style={[globalStyles.containerHorizontal, styles.container]}>
       {tabs.map((tab, index) => (
-        <Pressable
+        <TouchableOpacity
           onPress={() => {
             onChange(tab);
           }}
@@ -34,7 +35,7 @@ export default function Tabs({ activeTab, onChange, tabs }: Props) {
           >
             {tab}
           </ThemedText>
-        </Pressable>
+        </TouchableOpacity>
       ))}
     </Flex>
   );

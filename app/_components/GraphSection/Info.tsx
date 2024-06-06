@@ -1,10 +1,10 @@
-import { useMarketContext } from "@/app/_hooks/context";
+import { useMarketStore } from "@/app/_stores/useMarketStore";
 import { ThemedText } from "@/components/ThemedText";
 import { Colors, globalStyles } from "@/constants/Styles";
 import { View, StyleSheet } from "react-native";
 
 export default function Info() {
-  const { selectedMarket } = useMarketContext();
+  const { selectedMarket } = useMarketStore();
 
   return (
     <View style={globalStyles.container}>

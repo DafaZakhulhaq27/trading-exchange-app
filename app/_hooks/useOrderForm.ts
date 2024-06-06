@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useMarketContext } from "./context";
+import { useMarketStore } from "../_stores/useMarketStore";
 
 export const TypeBooks = [
   {
@@ -28,7 +28,7 @@ export const TypePosts = [
 ];
 
 export default function useOrderForm() {
-  const { selectedMarket } = useMarketContext();
+  const { selectedMarket } = useMarketStore();
   const [currentAction, setCurrentAction] = useState("buy");
   const [selectedTypeBook, setSelectedTypeBook] = useState(TypeBooks[0]);
   const [selectedPercentage, setSelectedPercentage] = useState(0);

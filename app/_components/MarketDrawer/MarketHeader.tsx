@@ -1,4 +1,4 @@
-import { useMarketContext } from "@/app/_hooks/context";
+import { useMarketStore } from "@/app/_stores/useMarketStore";
 import Flex from "@/components/Flex";
 import { ThemedText } from "@/components/ThemedText";
 import { Colors, globalStyles } from "@/constants/Styles";
@@ -8,7 +8,7 @@ import { Pressable, StyleSheet, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function MarketHeader({ navigation }: DrawerHeaderProps) {
-  const { selectedMarket } = useMarketContext();
+  const { selectedMarket } = useMarketStore();
 
   return (
     <SafeAreaView>
@@ -26,7 +26,7 @@ export default function MarketHeader({ navigation }: DrawerHeaderProps) {
           <ThemedText style={styles.currencyMarket}>
             /{selectedMarket?.currency}
           </ThemedText>
-        </TouchableOpacity >
+        </TouchableOpacity>
         <Ionicons name="ellipsis-vertical" size={20} />
       </Flex>
     </SafeAreaView>

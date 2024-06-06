@@ -15,7 +15,7 @@ import useMarket from "@/app/_hooks/useMarket";
 import Container from "@/components/Container";
 
 export default function MarketDrawer(props: DrawerContentComponentProps) {
-  const { onSelectMarket, data, search, _onSearch, _onSort } = useMarket();
+  const { setSelectedMarket, data, search, _onSearch, _onSort } = useMarket();
 
   const isDrawerOpen = useDrawerStatus() === "open";
 
@@ -37,9 +37,7 @@ export default function MarketDrawer(props: DrawerContentComponentProps) {
         renderItem={(v) => (
           <MarketItem
             onClick={(v) => {
-              if (onSelectMarket) {
-                onSelectMarket(v);
-              }
+              setSelectedMarket(v);
               props.navigation.closeDrawer();
             }}
             {...v.item}
