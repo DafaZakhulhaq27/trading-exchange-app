@@ -85,7 +85,7 @@ export default function OrderForm() {
           Saldo Tersedia
         </ThemedText>
         <Flex>
-          <ThemedText type="xs">IDR 0 </ThemedText>
+          <ThemedText type="xs">{selectedMarket?.currency} 0 </ThemedText>
           <Ionicons name="add-circle" color="blue" />
         </Flex>
       </Flex>
@@ -124,7 +124,7 @@ export default function OrderForm() {
         ]}
       >
         <ThemedText style={styles.buttonSubmitText}>
-          {isBuy ? "Beli" : "Jual"} ETH{" "}
+          {isBuy ? "Beli" : "Jual"} {selectedMarket?.name}{" "}
         </ThemedText>
       </Pressable>
     </View>
