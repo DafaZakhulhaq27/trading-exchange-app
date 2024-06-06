@@ -1,7 +1,7 @@
 ## Trading Exchange APp
 
 ## Getting Started
-** can get .env file from email **
+- Create .env file in the root of projects. you can get the contents from email or can contact me
 
 ```bash
 npm i
